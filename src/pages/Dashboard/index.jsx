@@ -15,7 +15,7 @@ const Dashboard = () => {
               src="https://www.animatedimages.org/data/media/1664/animated-work-in-progress-image-0011.gif"
               alt="Working"
             />
-            <span>Working in progress...</span>
+            <span>Under Construction...</span>
           </div>
         </ContentContainer>
       </div>
