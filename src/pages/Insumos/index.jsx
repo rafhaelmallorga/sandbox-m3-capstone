@@ -58,12 +58,15 @@ const Insumos = () => {
   return (
     <InsumosContainer>
       <Header />
-      <div>
+      <div className="contentPageContainer">
         <MenuLateral />
         <ContentContainer>
           <h1>Insumos</h1>
-          <div>
-            <form onSubmit={(e) => handleSubmit(e)}>
+          <div className="contentContentInsumo">
+            <form
+              className="formularioInsumo"
+              onSubmit={(e) => handleSubmit(e)}
+            >
               <input
                 type="text"
                 placeholder="Insumo"
@@ -114,7 +117,6 @@ const Insumos = () => {
                 supplies.map((el) => (
                   <CardSupply
                     name={el.name}
-                    supplier={el.supplier}
                     category={el.category}
                     quantity={el.quantity}
                     price={el.price}

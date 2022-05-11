@@ -82,12 +82,12 @@ const Produtos = () => {
   return (
     <ProdutosContainer>
       <Header />
-      <div>
+      <div className="contentPageContainer">
         <MenuLateral />
         <ContentContainer>
           <h1>Produtos</h1>
-          <div>
-            <div className="formulario">
+          <div className="pageContentProdutos">
+            <div className="formularioProduto">
               <input
                 type="text"
                 placeholder="Nome do Produto"
@@ -157,6 +157,8 @@ const Produtos = () => {
                   category={el.category}
                   price={el.price}
                   image={el.image}
+                  description={el.description}
+                  ingredients={el.ingredients}
                 />
               ))}
             </section>

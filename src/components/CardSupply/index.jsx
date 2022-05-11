@@ -1,13 +1,20 @@
 import { CardSupplyContainer } from "./styled";
 
-const CardSupply = ({ name, supplier, category, quantity, price }) => {
+const CardSupply = ({ name, category, quantity, price }) => {
   return (
     <CardSupplyContainer key={name}>
-      <span>{name}</span>
-      <span>{supplier}</span>
-      <span>{category}</span>
-      <span>{quantity}</span>
-      <span>{price}</span>
+      <span>
+        <span>Nome:</span> {name}
+      </span>
+      <span>
+        <span>Categoria:</span> {category}
+      </span>
+      <span>
+        <span>Quantidade</span> {quantity}
+      </span>
+      <span>
+        <span>Preço:</span> R$ {Number(price).toFixed(2)}
+      </span>
     </CardSupplyContainer>
   );
 };

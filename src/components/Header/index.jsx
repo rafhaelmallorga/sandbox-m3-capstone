@@ -4,9 +4,20 @@ const Header = () => {
   return (
     <NavBar>
       <div>
-        <h1>Meu Site</h1>
+        <div className="logoSection">
+          <img
+            src={require("../../assets/logo-hamburguer.png")}
+            alt="Hamburguer"
+          />
+          <h1>
+            DES<span>toq</span>
+          </h1>
+        </div>
+
+        <h3 className="provaDeConceito">PROVA DE CONCEITO</h3>
+
         <nav>
-          <span>Logout</span>
+          <button className="logoutButton">Logout</button>
         </nav>
       </div>
     </NavBar>

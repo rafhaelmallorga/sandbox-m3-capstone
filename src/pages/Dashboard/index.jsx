@@ -6,11 +6,17 @@ const Dashboard = () => {
   return (
     <DashboardContainer>
       <Header />
-      <div>
+      <div className="contentPageContainer">
         <MenuLateral />
         <ContentContainer>
           <h1>Dashboard</h1>
-          <div></div>
+          <div>
+            <img
+              src="https://www.animatedimages.org/data/media/1664/animated-work-in-progress-image-0011.gif"
+              alt="Working"
+            />
+            <span>Working in progress...</span>
+          </div>
         </ContentContainer>
       </div>
     </DashboardContainer>

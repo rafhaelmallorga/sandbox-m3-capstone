@@ -18,6 +18,13 @@ const Fornecedores = () => {
     });
   }, []);
 
+  const getApi = () => {
+    axios.get(`${urlBase}/providers`).then((resp) => {
+      console.log(resp.data);
+      setProviders(resp.data);
+    });
+  };
+
   console.log(dataForm);
 
   const handleSubmit = (e) => {
@@ -30,7 +37,10 @@ const Fornecedores = () => {
         ownerId: 1,
         supplyList: [],
       })
-      .then((resp) => console.log(resp));
+      .then((resp) => {
+        getApi();
+        console.log(resp);
+      });
   };
 
   console.log(providers);
@@ -38,7 +48,7 @@ const Fornecedores = () => {
   return (
     <FornecedoresContainer>
       <Header />
-      <div>
+      <div className="contentPageContainer">
         <MenuLateral />
         <ContentContainer>
           <h1>Fornecedores</h1>
@@ -148,10 +158,16 @@ const Fornecedores = () => {
               {providers &&
                 providers.map((el) => (
                   <Card
-                    name={el.fantasyName}
+                    companyName={el.companyName}
+                    fantasyName={el.fantasyName}
                     cnpj={el.cnpj}
                     ie={el.ie}
-                    supplyList={el.supplyList}
+                    cep={el.cep}
+                    street={el.address.street}
+                    complement={el.address.complement}
+                    district={el.address.district}
+                    number={el.address.number}
+                    city={el.address.city}
                     state={el.address.state}
                   />
                 ))}
